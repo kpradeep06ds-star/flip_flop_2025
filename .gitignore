@@ -1,7 +1,7 @@
 *.txt
 # Compiled output
 /target/
-
+target/
 # Cargo lock file - only ignore if you're building a library
 # (keep it committed for binaries/applications)
 # Cargo.lock
