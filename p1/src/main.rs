@@ -1,13 +1,12 @@
-use std::fs;
+// use std::fs;
+
+use p1::part_a::part_a;
+use p1::part_b::part_b;
+use p1::part_c::part_c;
 
 fn main() {
-    let mut countlines = 0;
-    let input_data = fs::read_to_string("./src/input.txt").expect("file doesn't present");
-    // trim doesn't return a new word it returnsa reference hence the .to_string()
-    // replace is different it returns a word not a reference 
-    for line in input_data.lines(){
-        let temp = line.replace("ba", " ba ").replace("na", " na ").replace("ne", " ne ").trim().to_string();
-        countlines += temp.replace("  ", " ").split(" ").filter(|c| *c == "na" || *c == "ne" || *c == "ba" ).collect::<Vec<&str>>().len();
-    }
-    println!("{:?}", countlines);
+    let out_a = part_a();
+    let out_b = part_b();
+    let out_c = part_c();
+    println!("{:?} {:?} {:?}", out_a, out_b, out_c);
 }
