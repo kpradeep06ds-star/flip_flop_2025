@@ -11,9 +11,7 @@ pub fn part_c() -> usize{
             let temp = line.replace("ba", " ba ").replace("na", " na ").trim().to_string();
         //countlines += temp.replace("  ", " ").split(" ").filter(|c| *c == "na" || *c == "ne" || *c == "ba" ).collect::<Vec<&str>>().len();
             let tempcount = temp.replace("  ", " ").split(" ").filter(|c| *c == "na"  || *c == "ba" ).collect::<Vec<&str>>().len();
-        
             countlines += tempcount;
-
         }
     }
     // problem 1a
